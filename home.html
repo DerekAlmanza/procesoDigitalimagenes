@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css">
+    <link rel="stylesheet" href="./css/styles_home.css">
+    <title>Home PDI</title>
+</head>
+<body>
+
+    <ul class="navbar">
+        <li class="navbarTitle"><b>PDI Practicas.</b></li>
+        <li ><a class="navbarGuardar" href="#"> <b>Guardar imagen</b></a></li>
+    </ul>
+
+    <div class="hero">
+        <form class="form" method="post" enctype="multipart/form-data">
+            <div>
+                <h2 class="title"> Filtros de imagen </h2>
+            </div>
+            <div class="imagenes">
+                <input class="hide" type="file" name="archivo" id="archivo">
+                <div id="imgInsertada" class="visualizaciones"> 
+                    <center>
+                        <i class="fas fa-file-upload"></i>
+                        <p class="visualizaciones__texto">
+                            <h2>
+                                Click Aquí
+                            </h2> 
+                        </p>
+                    </center>
+                </div>
+                <div class="botones__filtros">
+                    <div>
+                        <input type="button" id="filtroGris" class="subir__boton" value="Filtro Gris.">
+                    </div>
+                    <div>
+                        <input type="button" id="mosaico" class="subir__boton" value="Mosaico.">
+                    </div>
+                    <div>
+                        <input type="button" id="brillo" class="subir__boton" value="Modificar brillo.">
+                    </div>
+                </div>
+                <div id="imgEditada" class="visualizaciones"> 
+                    <center>
+                        <i class="fas fa-file-upload"></i>
+                        <p class="visualizaciones__texto">
+                            <h2>
+                                Imagen editada
+                            </h2> 
+                        </p>
+                    </center>
+                </div>
+            </div>
+        </form>
+    </div>
+    
+    
+</body>
+</html>
