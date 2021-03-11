@@ -5,13 +5,14 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./css/styles_home.css">
+    <link rel="stylesheet" href="./css/styles_slider.css">
     <title>Home PDI</title>
 </head>
 <body>
 
     <ul class="navbar">
         <li class="navbarTitle"><b>PDI Practicas. Almanza Infante Derek. </b></li>
-        <li ><a class="navbarBotones" href="#"> <b>Guardar imagen</b></a></li>
+        <li ><a class="navbarBotones" id="guardarImagen"> <b>Guardar imagen</b></a></li>
         <li id="elegirImagenBoton" class="navbarBotones"><b>Elegir imagen</b></li>
     </ul>
 
@@ -23,12 +24,9 @@
             <div id="imagenes"class="imagenes">
                 <input class="hide" type="file" name="archivo" id="archivo">
                 <div id="imgInsertada" class="visualizaciones"></div>
-                <div class="botones__filtros">
+                <div id="botonesFiltros" class="botones__filtros">
                     <div>
                         <input type="button" id="filtroGris" class="subir__boton" value="Filtro Gris.">
-                    </div>
-                    <div>
-                        <input type="button" id="color" class="subir__boton" value="Cambiar color.">
                     </div>
                     <div>
                         <input type="button" id="mosaico" class="subir__boton" value="Mosaico.">
@@ -36,6 +34,7 @@
                     <div>
                         <input type="button" id="brillo" class="subir__boton" value="Modificar brillo.">
                     </div>
+                    <div id="inputRango" class="inputRango"><div></div></div>
                 </div>
                 <canvas id="imgEditada" class="visualizaciones" width="500" height="400"></canvas>
             </div>
@@ -43,6 +42,7 @@
     </div>
     
 <script src="./src/filtroGris.js"></script>
+<script src="./src/ajustarBrillo.js"></script>
 <script src="./src/home.js"></script>
 </body>
 </html>
