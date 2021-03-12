@@ -11,6 +11,7 @@ const contextoEditado = imgEditada.getContext("2d");
 
 // id's de botones 
 const mosaicoBoton =document.getElementById('mosaico');
+const otraImagen = document.getElementById('otraImagen');
 
 /**
  * Función auxiliar para dibujar el Canvas de una imagen
@@ -53,9 +54,11 @@ const elegirImagen = () => {
                 fileReader.addEventListener('load', (evento) => {
                     img.setAttribute('src', evento.target.result); 
                     generarCanvas(img);
+                    archivo.disabled = true;
                     if(filtroGris()) console.log('xd');
                     if(cambiarBrillo()) console.log('xd');
                     if(mosaico()) console.log('xd');
+                    if(refrescarEscritorio()) console.log('xd');
                     if(guardarImagen()) console.log('xd');
                 })
                 fragmento.appendChild(img);
@@ -67,6 +70,15 @@ const elegirImagen = () => {
 }
 
 /**
+ * Función auxiliar encargada de limpiar el entorno de trabajo para ingresar
+ * de nuevo alguna imagen
+ */
+const refrescarEscritorio = () => {
+    otraImagen.addEventListener('click', () => {
+        location.reload();
+    })
+}
+/**
  * Función encargada de guardar la imagen ya editada.
  */
 const guardarImagen = () => {
@@ -77,11 +89,4 @@ const guardarImagen = () => {
     })
 }
 
-const mosaico = () => {
-    mosaicoBoton.addEventListener('click', (evento) => {
-        console.log('clickeaste para mosaico');
-    })
-}
-
 elegirImagen();
-

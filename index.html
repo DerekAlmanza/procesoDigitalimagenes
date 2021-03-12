@@ -10,14 +10,25 @@
 </head>
 <body>
 
-    <ul class="navbar">
+    <ul class="navbar_instrucciones">
         <li class="navbarTitle"><b>PDI Practicas. Almanza Infante Derek. </b></li>
         <li ><a class="navbarBotones" id="guardarImagen"> <b>Guardar imagen</b></a></li>
         <li id="elegirImagenBoton" class="navbarBotones"><b>Elegir imagen</b></li>
     </ul>
+    <div class="navbar_instrucciones">
+        <p>
+            <h3 class="instruccionesTitle">Instrucciones de uso</h3>
+            <ul class="listaInstrucciones">
+                <li class="itemInstruccion"> Ingrese imagen pulsando el botón <b><u>Elegir imagen</u></b> ubicado en la esquina superior derecha.</li>
+                <li class="itemInstruccion"> Aplique el filtro que desee usando los botones centrales de los filtros.</li>
+                <li class="itemInstruccion"> Si desea ingresar otra imagen, use el botón <b><u>Limpiar escritorio</u></b> y después repita la primera instrucción.</li>
+                <li class="itemInstruccion"> Guarde imagen pulsando el botón <b><u>Guardar imagen</u></b> ubicado en la esquina superior derecha. </li>
+            </ul>
+        </p>
+    </div>
 
     <div class="hero">
-        <form class="form" method="post" enctype="multipart/form-data">
+        <form class="form" method="post" enctype="multipart/form-data"> 
             <div>
                 <h2 class="title"> Filtros de imagen </h2>
             </div>
@@ -34,7 +45,10 @@
                     <div>
                         <input type="button" id="brillo" class="subir__boton" value="Modificar brillo.">
                     </div>
-                    <div id="inputRango" class="inputRango"><div></div></div>
+                    <div id="inputRango" class="inputRango"></div>
+                    <div>
+                        <input type="button" id="otraImagen" class="subir__boton" value="Limpiar escritorio.">
+                    </div>
                 </div>
                 <canvas id="imgEditada" class="visualizaciones" width="500" height="400"></canvas>
             </div>
@@ -42,6 +56,7 @@
     </div>
     
 <script src="./src/filtroGris.js"></script>
+<script src="./src/mosaico.js"></script>
 <script src="./src/ajustarBrillo.js"></script>
 <script src="./src/home.js"></script>
 </body>

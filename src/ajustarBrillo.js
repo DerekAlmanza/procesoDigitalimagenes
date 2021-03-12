@@ -7,8 +7,9 @@ const cambiarBrillo = () => {
         // Creamos elemento deslizante
         const barraDeslizante = document.createElement('input');
         barraDeslizante.setAttribute('type', 'range');
-        barraDeslizante.setAttribute('min', '-255');
-        barraDeslizante.setAttribute('max', '255');
+        barraDeslizante.setAttribute('min', '-143');
+        barraDeslizante.setAttribute('max', '143');
+        barraDeslizante.setAttribute('value', '0');
         barraDeslizante.classList.add('barraDeslizante')
         botonesFiltros.children[3].insertAdjacentElement('beforeend',barraDeslizante);
 
@@ -23,23 +24,13 @@ const cambiarBrillo = () => {
 
             // Recorremos imagen
             for(var i = 0; i < arregloRGB.length; i += 4) {
-                // var rojo = arregloRGB[i];
-                // var verde = arregloRGB[i+1];
-                // var azul = arregloRGB[i+2];
-                if(arregloRGB[i]+valorBrillo > 255) arregloRGB[i] = 255;
-                if(arregloRGB[i+1]+valorBrillo > 255) arregloRGB[i+1] = 255;
-                if(arregloRGB[i+2]+valorBrillo > 255) arregloRGB[i+2] = 255;
-
-                if(arregloRGB[i]+valorBrillo < 0) arregloRGB[i] = 0;
-                if(arregloRGB[i+1]+valorBrillo < 0) arregloRGB[i+1] = 0;
-                if(arregloRGB[i+2]+valorBrillo < 0) arregloRGB[i+2] = 0;
                 
-                arregloRGB[i]= arregloRGB[i] + valorBrillo;
-                arregloRGB[i+1]= arregloRGB[i+1] + valorBrillo;
-                arregloRGB[i+2]= arregloRGB[i+2] + valorBrillo;
+                arregloRGB[i] += valorBrillo;
+                arregloRGB[i+1] += valorBrillo;
+                arregloRGB[i+2] += valorBrillo;
 
-                 
             }
+            console.log(barraDeslizante.value);
             contextoEditado.putImageData(imgInfo,0,0);
         })
     })

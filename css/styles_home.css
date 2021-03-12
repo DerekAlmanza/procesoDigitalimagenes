@@ -2,7 +2,7 @@ body {
     background: #00001d;
 }
 
-.navbar { 
+.navbar_instrucciones { 
     list-style-type: none;
     margin: 0;
     padding: 0;
@@ -34,6 +34,33 @@ body {
 
 .navbarBotones:hover {
     background-color: #111;
+}
+
+.instruccionesTitle {
+    display: block;
+    color: white;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-style: italic;
+    margin-left: 15px;
+}
+
+.listaInstrucciones {
+    list-style: none; 
+    padding: 0; 
+    margin-left: 30px;
+}
+
+.itemInstruccion::before {
+    content: "\2022"; /* Insertamos el marcador */
+    padding-right: 8px; /* Establecemos el espacio entre las viñetas y el list item */
+    color: white;
+}
+
+.itemInstruccion {
+    color: white;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-style: italic;
+    margin-bottom: 10px;
 }
 
 .hero { 
@@ -111,6 +138,26 @@ body {
     color: #414141;
     cursor: pointer;
 }
+
+.num__boton {
+    background: orangered;
+    font-size:14px;
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-weight:bold;
+    font-style: italic;
+    margin-bottom: 10px;
+    margin-left: 40px;
+    margin-right: 10px;
+    width: 50px;
+    height: 25px;
+    border-color: #414141;
+    padding: 0.2rem 0.8rem;
+    border-radius: 15px;
+    color: #414141;
+    cursor: pointer;
+    position: relative;
+}
+
 
 .hide {
     display: none;
