@@ -2,7 +2,9 @@
 Prácticas relacionadas con la materia de PDI del profesor Manuel Cristóbal López Michelone.
 
 ## Compatibilidad de aplicación
-Compatibilidad **excelente** 
+Compatibilidad **excelente** con Google Chrome.
+Compatibilidad **buena** con Safari.
+Navegadores no mencionados **no** soportados.
 
 ## Forma de ejecución
 * Hacer click en https://derekalmanza.github.io/procesoDigitalimagenes/
