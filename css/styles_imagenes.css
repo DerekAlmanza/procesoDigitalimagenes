@@ -1,0 +1,12 @@
+.imagenes {
+    display: flex;
+    justify-content: space-around;
+}
+
+.visualizaciones {
+    width: 510px;
+    height: 410px;
+    background-color: rgb(59, 150, 241);
+    font-size: large;
+    border: 10px solid rgb(10, 10, 185);
+}

@@ -1,0 +1,40 @@
+.botones__filtros {
+    justify-content: center;
+}
+
+.subir__boton {
+    background: orangered;
+    font-size:14px;
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-weight:bold;
+    font-style: italic;
+    margin-bottom: 10px;
+    margin-left: 10px;
+    margin-right: 10px;
+    width: 140px;
+    height: 40px;
+    border-color: #414141;
+    padding: 0.2rem 0.8rem;
+    border-radius: 15px;
+    color: #414141;
+    cursor: pointer;
+}
+
+.num__boton {
+    background: orangered;
+    font-size:14px;
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-weight:bold;
+    font-style: italic;
+    margin-bottom: 10px;
+    margin-left: 40px;
+    margin-right: 10px;
+    width: 50px;
+    height: 25px;
+    border-color: #414141;
+    padding: 0.2rem 0.8rem;
+    border-radius: 15px;
+    color: #414141;
+    cursor: pointer;
+    position: relative;
+}
