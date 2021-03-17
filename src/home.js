@@ -59,6 +59,7 @@ const elegirImagen = () => {
                     if(mosaico()) console.log('xd');
                     if(altoContraste()) console.log('xd');
                     if(altoContrasteInverso()) console.log('xd');
+                    if(compsRGB()) console.log('xd');
                     if(refrescarEscritorio()) console.log('xd');
                     if(guardarImagen()) console.log('xd');
                 })
