@@ -10,7 +10,6 @@ const imgEditada = document.getElementById('imgEditada');
 const contextoEditado = imgEditada.getContext("2d");
 
 // id's de botones 
-const mosaicoBoton =document.getElementById('mosaico');
 const otraImagen = document.getElementById('otraImagen');
 
 /**
@@ -58,6 +57,8 @@ const elegirImagen = () => {
                     if(filtroGris()) console.log('xd');
                     if(cambiarBrillo()) console.log('xd');
                     if(mosaico()) console.log('xd');
+                    if(altoContraste()) console.log('xd');
+                    if(altoContrasteInverso()) console.log('xd');
                     if(refrescarEscritorio()) console.log('xd');
                     if(guardarImagen()) console.log('xd');
                 })

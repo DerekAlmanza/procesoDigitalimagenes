@@ -37,7 +37,6 @@
             </div>
             <div id="imagenes" class="imagenes">
                 <input class="hide" type="file" name="archivo" id="archivo">
-                <div id="imgInsertada" class="visualizaciones"></div>
                 <div id="botonesFiltros" class="botones__filtros">
                     <div>
                         <input type="button" id="filtroGris" class="subir__boton" value="Filtro Gris.">
@@ -50,10 +49,24 @@
                     </div>
                     <div id="inputRango" class="inputRango"></div>
                     <div>
-                        <input type="button" id="otraImagen" class="subir__boton" value="Limpiar escritorio.">
+                        <input type="button" id="altoContraste" class="subir__boton" value="Alto contraste.">
+                    </div>
+                    <div>
+                        <input type="button" id="rgb" class="subir__boton__letras__grandes" value="Componentes RGB.">
+                    </div>
+                    <div>
+                        <input type="button" id="convoluciones" class="subir__boton" value="Convoluciones.">
                     </div>
                 </div>
-                <canvas id="imgEditada" class="visualizaciones" width="500" height="400"></canvas>
+                <div>
+                    <div>
+                        <input type="button" id="otraImagen" class="subir__boton__letras__grandes__limpiar" value="Limpiar escritorio.">
+                    </div>
+                </div>
+                <div>
+                    <div id="imgInsertada" class="hide"></div>
+                    <canvas id="imgEditada" class="visualizaciones" width="500" height="400"></canvas>
+                </div>
             </div>
         </form>
     </div>
@@ -61,6 +74,9 @@
 <script src="./src/filtroGris.js"></script>
 <script src="./src/mosaico.js"></script>
 <script src="./src/ajustarBrillo.js"></script>
+<script src="./src/contraste.js"></script>
+<script src="./src/compsRGB.js"></script>
+<script src="./src/convoluciones.js"></script>
 <script src="./src/home.js"></script>
 </body>
 </html>

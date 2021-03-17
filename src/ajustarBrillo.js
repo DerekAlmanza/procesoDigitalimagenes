@@ -1,7 +1,11 @@
+// ID's de botones
 const brilloBoton = document.getElementById('brillo');
 const botonesFiltros = document.getElementById('botonesFiltros');
 const inputRango = document.getElementById('inputRango');
 
+/**
+ * Función encargada de ajustar el brillo por medio de un slider generado.
+ */
 const cambiarBrillo = () => {
     brilloBoton.addEventListener('click', () => {
         // Creamos elemento deslizante

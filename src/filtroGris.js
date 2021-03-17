@@ -127,3 +127,20 @@ const filtroGris = () => {
         } else alert('Opción inválida.');
     })
 }
+
+const grisParaContraste = () => {
+
+    // Leemos info
+    const imgInfo = contextoEditado.getImageData(0,0,imgEditada.width,imgEditada.height);
+    const arregloRGB = imgInfo.data;
+
+    // Filtro gris Luma.
+            
+    for(var i = 0; i < arregloRGB.length; i += 4) {
+        var grayscale= (0.3 * arregloRGB[i])+(0.59 * arregloRGB[i+1])+(0.11 * arregloRGB[i+2]);
+        arregloRGB[i]=grayscale;
+        arregloRGB[i+1]=grayscale;
+        arregloRGB[i+2]=grayscale;
+    }
+    contextoEditado.putImageData(imgInfo,0,0);
+}

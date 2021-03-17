@@ -1,3 +1,9 @@
+// ID de botón
+const mosaicoBoton =document.getElementById('mosaico');
+
+/**
+ * Función encargada de crear el filtro mosaico.
+ */
 const mosaico = () => {
     mosaicoBoton.addEventListener('click', () => {
         const porcion = parseInt(prompt(`Ingrese la cantidad de pixeles que quiere tomar para el mosaico: `));
