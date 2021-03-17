@@ -8,6 +8,7 @@ Navegadores no mencionados **no** soportados.
 
 ## Forma de ejecución
 * Hacer click en https://derekalmanza.github.io/procesoDigitalimagenes/
+* O clonar repositorio y abrir el archivo `index.html`.
 
 ## Instrucciones de uso
 * Ingrese imagen pulsando el botón **Elegir imagen** ubicado en la esquina superior derecha.
