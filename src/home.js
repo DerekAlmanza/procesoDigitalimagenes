@@ -34,7 +34,6 @@ const elegirImagen = () => {
                 const fileReader = new FileReader();
                 fileReader.readAsDataURL(imagen);
                 const img = document.createElement('img');
-                img.className += 'imagen';
                 fileReader.addEventListener('load', (evento) => {
                     img.setAttribute('src', evento.target.result);
                 })
@@ -60,6 +59,7 @@ const elegirImagen = () => {
                     if(altoContraste()) console.log('xd');
                     if(altoContrasteInverso()) console.log('xd');
                     if(compsRGB()) console.log('xd');
+                    if(convoluciones()) console.log('xd');
                     if(refrescarEscritorio()) console.log('xd');
                     if(guardarImagen()) console.log('xd');
                 })

@@ -6,7 +6,7 @@ const altoContrasteBoton = document.getElementById('altoContraste');
  */
 const altoContraste = () => {
     altoContrasteBoton.addEventListener('click', () => {
-    grisParaContraste();
+    grisParaAuxiliares();
 
     // Leemos info
     const imgInfo = contextoEditado.getImageData(0,0,imgEditada.width,imgEditada.height);
@@ -40,7 +40,7 @@ const altoContraste = () => {
  */
  const altoContrasteInverso = () => {
     altoContrasteBoton.addEventListener('click', () => {
-        grisParaContraste();
+        grisParaAuxiliares();
 
         // Leemos info
         const imgInfo = contextoEditado.getImageData(0,0,imgEditada.width,imgEditada.height);

@@ -128,7 +128,7 @@ const filtroGris = () => {
     })
 }
 
-const grisParaContraste = () => {
+const grisParaAuxiliares = () => {
 
     // Leemos info
     const imgInfo = contextoEditado.getImageData(0,0,imgEditada.width,imgEditada.height);
