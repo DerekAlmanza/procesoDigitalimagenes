@@ -15,3 +15,6 @@ Navegadores no mencionados **no** soportados.
 * Aplique el filtro que desee usando los botones centrales de los filtros.
 * Si desea ingresar otra imagen, use el botón **Limpiar escritorio** y después repita la primera instrucción.
 * Guarde imagen pulsando el botón **Guardar imagen** ubicado en la esquina superior derecha.
+
+## Propietario 👤
+*Almanza Infante Derek* - *316332022*
