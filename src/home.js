@@ -12,6 +12,10 @@ const contextoEditado = imgEditada.getContext("2d");
 // id's de botones 
 const otraImagen = document.getElementById('otraImagen');
 
+// id's de instrucciones.
+const despliegaInstrucciones = document.getElementById('despliegaInstrucciones');
+const instrucciones = document.getElementById('instrucciones');
+
 /**
  * Función auxiliar para dibujar el Canvas de una imagen
  * @param imagen objetoHTML recibido para dibujar la imagen con Canvas 
@@ -91,4 +95,22 @@ const guardarImagen = () => {
     })
 }
 
+/**
+ * Función encargada de desplegar y ocultar las instrucciones con un click.
+ */
+const generaInstrucciones = () => {
+    despliegaInstrucciones.addEventListener('click', () => {
+        if(instrucciones.className == 'hide') {
+            instrucciones.classList.remove('hide');
+            instrucciones.classList.add('listaInstrucciones');
+            despliegaInstrucciones.innerHTML = `Instrucciones de uso &#x25BE;`; 
+        } else {
+            instrucciones.classList.add('hide');
+            instrucciones.classList.remove('listaInstrucciones');
+            despliegaInstrucciones.innerHTML = `Instrucciones de uso &#x25B8;`;   
+        }
+    })          
+}
+
+generaInstrucciones();
 elegirImagen();

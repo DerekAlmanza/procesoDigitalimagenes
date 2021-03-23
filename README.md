@@ -3,7 +3,11 @@ Prácticas relacionadas con la materia de PDI del profesor Manuel Cristóbal Ló
 
 ## Compatibilidad de aplicación
 Compatibilidad **excelente** con Google Chrome.
+
 Compatibilidad **buena** con Safari.
+
+Compatibilidad **buena** con Mozilla Firefox.
+
 Navegadores no mencionados **no** soportados.
 
 ## Forma de ejecución

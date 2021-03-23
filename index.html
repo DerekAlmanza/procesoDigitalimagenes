@@ -18,22 +18,24 @@
         <li ><a class="navbarBotones" id="guardarImagen"> <b>Guardar imagen</b></a></li>
         <li id="elegirImagenBoton" class="navbarBotones"><b>Elegir imagen</b></li>
     </ul>
+
     <div class="navbar_instrucciones">
         <p>
-            <h3 class="instruccionesTitle">Instrucciones de uso</h3>
-            <ul class="listaInstrucciones">
-                <li class="itemInstruccion"> Ingrese imagen pulsando el botón <b><u>Elegir imagen</u></b> ubicado en la esquina superior derecha.</li>
-                <li class="itemInstruccion"> Aplique el filtro que desee usando los botones centrales de los filtros.</li>
-                <li class="itemInstruccion"> Si desea ingresar otra imagen, use el botón <b><u>Limpiar escritorio</u></b> y después repita la primera instrucción.</li>
-                <li class="itemInstruccion"> Guarde imagen pulsando el botón <b><u>Guardar imagen</u></b> ubicado en la esquina superior derecha. </li>
-            </ul>
+            <li><h3 id="despliegaInstrucciones" class="instruccionesTitle">Instrucciones de uso &#x25B8;</h3>
+                <ul id="instrucciones" class="hide">
+                    <li class="itemInstruccion"> Ingrese imagen pulsando el botón <b><u>Elegir imagen</u></b> ubicado en la esquina superior derecha.</li>
+                    <li class="itemInstruccion"> Aplique el filtro que desee usando los botones centrales de los filtros.</li>
+                    <li class="itemInstruccion"> Si desea ingresar otra imagen, use el botón <b><u>Limpiar escritorio</u></b> y después repita la primera instrucción.</li>
+                    <li class="itemInstruccion"> Guarde imagen pulsando el botón <b><u>Guardar imagen</u></b> ubicado en la esquina superior derecha. </li>
+                </ul>
+            </li>
         </p>
     </div>
 
     <div class="hero">
         <form class="form" method="post" enctype="multipart/form-data"> 
             <div>
-                <h2 class="title"> Filtros de imagen </h2>
+                <h2 class="title" id="title"> Filtros de imagen </h2>
             </div>
             <div id="imagenes" class="imagenes">
                 <input class="hide" type="file" name="archivo" id="archivo">
@@ -54,7 +56,6 @@
                     <div>
                         <input type="button" id="rgb" class="subir__boton__letras__grandes" value="Componentes RGB.">
                     </div>
-                    <div id="modificaColor" class="inputRango"></div>
                     <div>
                         <input type="button" id="convoluciones" class="subir__boton" value="Convoluciones.">
                     </div>
@@ -72,12 +73,16 @@
         </form>
     </div>
     
-<script src="./src/filtroGris.js"></script>
-<script src="./src/mosaico.js"></script>
-<script src="./src/ajustarBrillo.js"></script>
-<script src="./src/contraste.js"></script>
-<script src="./src/compsRGB.js"></script>
-<script src="./src/convoluciones.js"></script>
+<!-- Scripts de práctica 01 -->
+<script src="./src/practica01/filtroGris.js"></script>
+<script src="./src/practica01/mosaico.js"></script>
+<script src="./src/practica01/ajustarBrillo.js"></script>
+
+<!-- Scripts de práctica 02 -->
+<script src="./src/practica02/contraste.js"></script>
+<script src="./src/practica02/compsRGB.js"></script>
+<script src="./src/practica02/convoluciones.js"></script>
+
 <script src="./src/home.js"></script>
 </body>
 </html>

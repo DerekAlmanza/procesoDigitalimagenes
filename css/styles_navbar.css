@@ -34,10 +34,16 @@
 
 .instruccionesTitle {
     display: block;
+    height: 40px;
     color: white;
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
     font-style: italic;
     margin-left: 15px;
+    cursor: pointer;
+}
+
+.instruccionesTitle:hover {
+    background-color: #111;
 }
 
 .listaInstrucciones {
