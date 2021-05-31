@@ -1,5 +1,8 @@
 # procesoDigitalimagenes
-Prácticas relacionadas con la materia de PDI del profesor Manuel Cristóbal López Michelone.
+Prácticas relacionadas con la materia de PDI del profesor *Manuel Cristóbal López Michelone*.
+
+## Propietario 👤
+*Almanza Infante Derek* - *316332022*
 
 ## Compatibilidad de aplicación
 Compatibilidad **excelente** con Google Chrome.
@@ -20,5 +23,21 @@ Navegadores no mencionados **no** soportados.
 * Si desea ingresar otra imagen, use el botón **Limpiar escritorio** y después repita la primera instrucción.
 * Guarde imagen pulsando el botón **Guardar imagen** ubicado en la esquina superior derecha.
 
-## Propietario 👤
-*Almanza Infante Derek* - *316332022*
+## Filtros disponibles 🌅
+* Filtro Gris.
+    * Quick and dirty.
+    * Método Luma.
+    * Método desaturación.
+    * Máxima o mínima saturación.
+    * B/N con un solo canal RGB.
+* Mosaico.
+* Modificar brillo.
+* Alto contraste.
+* Modificar componentes RGB.
+* Convoluciones.
+    * Blur.
+    * Motion Blur.
+    * Encontrar bordes.
+    * Sharpen.
+    * Emboss. 
+

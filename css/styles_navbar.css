@@ -34,7 +34,8 @@
 
 .instruccionesTitle {
     display: block;
-    height: 40px;
+    padding: 5px 0;
+    width: 350px;
     color: white;
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
     font-style: italic;
