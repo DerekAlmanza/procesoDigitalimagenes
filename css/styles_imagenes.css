@@ -10,3 +10,11 @@
     font-size: large;
     border: 10px solid rgb(10, 10, 185);
 }
+
+.fondo-blanco {
+    width: 510px;
+    height: 410px;
+    background-color: white;
+    font-size: large;
+    border: 10px solid rgb(10, 10, 185);
+}
