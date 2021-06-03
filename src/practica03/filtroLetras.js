@@ -10,44 +10,33 @@ const letras = () => {
         1. Letra M a color.
         2. Letra M a blanco y negro.
         3. Letras que simulan tonos de gris.
-        4. Letras a color con los 16 tonos de gris del punto 3.
-        5. Letras a blanco y negro con los 16 tonos de gris del punto 3.
+        4. Combinación del punto 1 con el punto 3.
+        5. Combinación del punto 2 con el punto 3.
         6. Imagen con letrero.`));
 
-        if (eleccion === 1) letraMColor();
-        else if(eleccion === 2) letraMBN();
-        else if(eleccion === 3) {
-            xd(); 
-        } else if(eleccion === 4) {
-            console.log('xd');
-        } else if(eleccion === 5) {
-            console.log('xd');
-        } else if(eleccion === 6) {
+        if (eleccion === 1) ingresaCaracter('M', 1);
+        else if(eleccion === 2) {
+            grisParaAuxiliares();
+            ingresaCaracter('M',2);
+        }
+        else if(eleccion === 3) ingresaCaracter('',3);
+        else if(eleccion === 4) ingresaCaracter('', 4);
+        else if(eleccion === 5) {
+            grisParaAuxiliares();
+            ingresaCaracter('', 5);
+        }
+        else if(eleccion === 6) {
             console.log('xd');
         }
     })
 }
 
 /**
- * Función que será llamada para cuando se desee convertir la imagen en letras M a color.
- */
-const letraMColor = () => {
-    ingresaCaracter('M');
-}
-
-/**
- * Función que será llamada para cuando se desee convertir la imagen en letras M en blanco y negro.
- */
-const letraMBN = () => {
-    grisParaAuxiliares();
-    ingresaCaracter('M');
-}
-
-/**
  * Función auxiliar encargada de transformar la imagen en letras M o carcateres en escala de gris.
  * @param {string} caracter String a ingresar para imprimir en la imagen.
- */
-const ingresaCaracter = (caracter) => {
+ * @param {int} eleccion Int a ingresar dependiendo del caso que queramos.
+*/
+const ingresaCaracter = (caracter, eleccion) => {
     
     const porcion = parseInt(prompt(`Ingrese la cantidad de pixeles que quiere tomar para el mosaico: `));
 
@@ -80,49 +69,27 @@ const ingresaCaracter = (caracter) => {
     for (var y = 0; y < imgEditada.height; y += porcion) {
         for (var x = 0; x < imgEditada.width; x += porcion) {
             var rgb = calcularPromedio(x, y);
-            contextoEditado.fillStyle = `rgb(${rgb[0]},${rgb[1]},${rgb[2]})`;
-            contextoEditado.fillText(caracter, x, y, porcion);
-            contextoEditado.clearRect(x,y,porcion,porcion);
-        }
-    }
-}
 
-const xd = () => {
-    
-    const porcion = parseInt(prompt(`Ingrese la cantidad de pixeles que quiere tomar para el mosaico: `));
-
-    // Cambiaremos el fondo a un fondo blanco para mejor visualización de la imagen.
-    imgEditada.classList.remove('visualizaciones');
-    imgEditada.classList.add('fondo-blanco');
-
-    // Leemos info
-    const imgInfo = contextoEditado.getImageData(0,0,imgEditada.width,imgEditada.height);
-    const arregloRGB = imgInfo.data;
-
-    const calcularPromedioAux = (x,y) => {
-        let contador = 0;
-        let rojo = 0; let verde = 0; let azul = 0;
-        for (var j = y; j < y + porcion; j++) {
-            for (var k = x; k < x + porcion; k++) {
-                    var i = (k + j * imgEditada.width) * 4;
-                    rojo += arregloRGB[i];
-                    verde += arregloRGB[i + 1];
-                    azul += arregloRGB[i + 2];
-                    contador++;
+            // Verificamos casos para saber qué hacer.
+            try {
+                if(eleccion === 1 || eleccion === 2) {
+                contextoEditado.fillStyle = `rgb(${rgb[0]},${rgb[1]},${rgb[2]})`;
+                contextoEditado.fillText(caracter, x, y, porcion);
+                } else if(eleccion === 3) {
+                    const rgbPromedio = Math.round((rgb[0] + rgb[1] + rgb[2]) / 3);
+                    contextoEditado.fillText(tonosGris(rgbPromedio), x, y, porcion);
+                } else if(eleccion === 4 || eleccion === 5) {
+                    const rgbPromedio = Math.round((rgb[0] + rgb[1] + rgb[2]) / 3);
+                    contextoEditado.fillStyle = `rgb(${rgb[0]},${rgb[1]},${rgb[2]})`;
+                    contextoEditado.fillText(tonosGris(rgbPromedio), x, y, porcion);
+                } else if(eleccion === 6) {
+                    console.log('xd');
+                }
+            } catch (error) {
+                console.log(error);
             }
-            rojo = Math.round(rojo / contador);
-            verde = Math.round(verde / contador);
-            azul = Math.round(azul / contador);
-            return [rojo,verde,azul];
-        }
-    }
 
-    for (var y = 0; y < imgEditada.height; y += porcion) {
-        for (var x = 0; x < imgEditada.width; x += porcion) {
-            const rgb = calcularPromedioAux(x, y);
-            const rgbPromedio = Math.round((rgb[0] + rgb[1] + rgb[2]) / 3);
-            contextoEditado.fillStyle = `rgb(${rgb[0]},${rgb[1]},${rgb[2]})`;
-            contextoEditado.fillText(tonosGris(rgbPromedio), x, y, porcion);
+            // Esto se hace sí o sí, transparentar la imagen.
             contextoEditado.clearRect(x,y,porcion,porcion);
         }
     }
@@ -153,6 +120,5 @@ const tonosGris = (rgbPromedio) => {
     else if (rgbPromedio >= 210 && rgbPromedio <= 225) caracter = '+';
     else if (rgbPromedio >= 226 && rgbPromedio <= 239) caracter = '.';
     else if (rgbPromedio >= 240 && rgbPromedio <= 255) caracter = ' ';
-    console.log(caracter);
     return caracter;
 }
