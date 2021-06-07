@@ -1,0 +1,37 @@
+@font-face {
+    font-family: 'domino-negro';
+    src: url(../fonts/Lasvbld_.ttf);
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'domino-blanco';
+    src: url(../fonts/Lasvwd__.ttf);
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'naipes';
+    src: url(../fonts/PLAYCRDS.TTF);
+    font-style: normal;
+}
+
+.dominoNegro {
+    font-family: 'domino-negro';
+    background-color: white;
+}
+
+.dominoBlanco {
+    font-family: 'domino-blanco';
+    background-color: white;
+}
+
+.naipes {
+    display: inline-block;
+    margin-left: 20px;
+    margin-bottom: 10px;
+    font-family: 'naipes';
+    text-align: center;
+    font-size: large;
+    background-color: rgb(172, 182, 31);
+}

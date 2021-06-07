@@ -40,4 +40,15 @@ Navegadores no mencionados **no** soportados.
     * Encontrar bordes.
     * Sharpen.
     * Emboss. 
+* Letras.
+    * Letra M a color.
+    * Letra M a blanco y negro.
+    * Letras que simulan tonos de gris.
+    * Combinación del punto 1 con el punto 3.
+    * Combinación del punto 2 con el punto 3.
+    * Imagen con letrero. (Funciona con frases cortas).
+* Convertir imagen a:
+    * Fichas de dominó blancas.
+    * Fichas de dominó negras.
+    * Cartas de naipes.
 

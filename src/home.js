@@ -65,7 +65,7 @@ const elegirImagen = () => {
                     if(compsRGB()) console.log('xd');
                     if(convoluciones()) console.log('xd');
                     if(letras()) console.log('xd');
-                    if(domino()) console.log('xd');
+                    if(dominoBlanco()) console.log('xd');
                     if(naipes()) console.log('xd');
                     if(refrescarEscritorio()) console.log('xd');
                     if(guardarImagen()) console.log('xd');
@@ -117,3 +117,5 @@ const generaInstrucciones = () => {
 
 generaInstrucciones();
 elegirImagen();
+cargarFuente('dominoBlanco');
+cargarFuente('dominoNegro');
