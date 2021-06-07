@@ -6,8 +6,6 @@ const naipesBoton = document.getElementById('naipes')
 const naipes = () => {
     naipesBoton.addEventListener('click', () => {
         cargarFuente('naipes');
-        // fuentePrecargada.classList.add('naipesClase');
-        // fuentePrecargada.textContent = 'abcdefghij';
         ingresaCaracter('',9);
     })
 }

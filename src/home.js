@@ -21,6 +21,8 @@ const instrucciones = document.getElementById('instrucciones');
  * @param imagen objetoHTML recibido para dibujar la imagen con Canvas 
  */
 const generarCanvas = (imagen) => {
+    imgEditada.width = imagen.width/2;
+    imgEditada.height = imagen.height/2;
     contextoEditado.drawImage(imagen,0,0,imgEditada.width,imgEditada.height);
 }
 
