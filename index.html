@@ -10,6 +10,7 @@
     <link rel="stylesheet" href="./css/styles_botones.css">
     <link rel="stylesheet" href="./css/styles_slider.css">
     <link rel="stylesheet" href="./css/styles_fonts.css">
+    <link rel="stylesheet" href="./css/styles_marcaAgua.css">
     <title>Home PDI</title>
 </head>
 <body>
@@ -35,9 +36,6 @@
 
     <div class="hero">
         <form class="form" method="post" enctype="multipart/form-data"> 
-            <!-- <div>
-                <h2 class="title" id="title"> Filtros de imagen </h2>
-            </div> -->
             <div id="imagenes" class="imagenes">
                 <input class="hide" type="file" name="archivo" id="archivo">
                 <div id="botonesFiltros" class="botones__filtros">
@@ -68,12 +66,15 @@
                     </div>
                     <div class="dominoBlanco">0123456789</div>
                     <div class="dominoNegro">0123456789</div>
-                </div>
-                <div>
                     <div>
                         <input type="button" id="naipes" class="subir__boton" value="Filtro naipes.">
                     </div>
                     <div class="naipes">abcdefghij</div>
+                </div>
+                <div>
+                    <div>
+                        <input type="button" id="marcaAgua" class="subir__boton" value="Marca de agua.">
+                    </div>
                     <div>
                         <input type="button" id="otraImagen" class="subir__boton__letras__grandes__limpiar" value="Limpiar escritorio.">
                     </div>
@@ -81,6 +82,24 @@
                 <div>
                     <div id="imgInsertada" class="hide"></div>
                     <canvas id="imgEditada" class="visualizaciones" width="500" height="400"></canvas>
+                    <div id="formMarcaAgua" class="marca-agua hide">
+                        <label for="tipoLetra"class="label"> Tipo letra </label>
+                        <select name="tamañoFuente" id="tamañoFuente">
+                            <option value="f1">Arial</option>
+                            <option value="f2">Calibri</option>
+                            <option value="f3">Times New Roman</option>
+                            <option value="f4">Roboto</option>
+                        </select>
+                        <label for="tamañoFuente" class="label"> Tamaño fuente </label>
+                        <select name="tamañoFuente" id="tamañoFuente">
+                            <option value="xs">Extrachica</option>
+                            <option value="s">Chica</option>
+                            <option value="m">Mediana</option>
+                            <option value="l">Grande</option>
+                            <option value="xl">Extragrande</option>
+                        </select>
+                        <button class="aceptar" id="aceptar"> Agregar marca. </button>
+                    </div>
                 </div>
             </div>
         </form>
@@ -101,6 +120,9 @@
 <script src="./src/practica03/filtroLetras.js"></script>
 <script src="./src/practica03/filtroDomino.js"></script>
 <script src="./src/practica03/filtroNaipes.js"></script>
+
+<!-- Scripts de práctica 04 -->
+<script src="./src/practica04/marcaAgua.js"></script>
 
 <script src="./src/home.js"></script>
 </body>

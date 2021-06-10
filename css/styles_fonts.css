@@ -16,20 +16,20 @@
     font-style: normal;
 }
 
-.dominoNegro {
-    font-family: 'domino-negro';
+.dominoBlanco {
+    font-family: 'domino-blanco';
     background-color: white;
 }
 
-.dominoBlanco {
-    font-family: 'domino-blanco';
+.dominoNegro {
+    margin-bottom: 10px;
+    font-family: 'domino-negro';
     background-color: white;
 }
 
 .naipes {
     display: inline-block;
     margin-left: 20px;
-    margin-bottom: 10px;
     font-family: 'naipes';
     text-align: center;
     font-size: large;

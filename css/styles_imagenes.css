@@ -6,6 +6,7 @@
 .visualizaciones {
     width: 510px;
     height: 410px;
+    margin-bottom: 20px;
     background-color: rgb(59, 150, 241);
     font-size: large;
     border: 10px solid rgb(10, 10, 185);
