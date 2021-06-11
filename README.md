@@ -51,4 +51,5 @@ Navegadores no mencionados **no** soportados.
     * Fichas de dominó blancas.
     * Fichas de dominó negras.
     * Cartas de naipes.
+* Insertar marca de agua al centro.
 

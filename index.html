@@ -83,21 +83,30 @@
                     <div id="imgInsertada" class="hide"></div>
                     <canvas id="imgEditada" class="visualizaciones" width="500" height="400"></canvas>
                     <div id="formMarcaAgua" class="marca-agua hide">
-                        <label for="tipoLetra"class="label"> Tipo letra </label>
-                        <select name="tamañoFuente" id="tamañoFuente">
-                            <option value="f1">Arial</option>
-                            <option value="f2">Calibri</option>
-                            <option value="f3">Times New Roman</option>
-                            <option value="f4">Roboto</option>
+                        <label for="tipoLetra" class="label"> Tipo letra </label>
+                        <select name="tipoLetra" id="tipoLetra">
+                            <option value="normal">Normal</option>
+                            <option value="italic">Itálica</option>
+                            <option value="bold">Negrita</option>
                         </select>
-                        <label for="tamañoFuente" class="label"> Tamaño fuente </label>
-                        <select name="tamañoFuente" id="tamañoFuente">
-                            <option value="xs">Extrachica</option>
-                            <option value="s">Chica</option>
-                            <option value="m">Mediana</option>
-                            <option value="l">Grande</option>
-                            <option value="xl">Extragrande</option>
+                        <label for="fuenteLetra"class="label"> Fuente letra </label>
+                        <select name="fuenteLetra" id="fuenteLetra">
+                            <option value="arial">Arial</option>
+                            <option value="courier New">Courier New</option>
+                            <option value="sans-serif">Sans-serif</option>
+                            <option value="serif">Serif</option>
+                            <option value="times New Roman">Times New Roman</option>
                         </select>
+                        <br> <br>
+                        <label for="tamanoFuente" class="label"> Tamaño fuente </label>
+                        <select name="tamañnoFuente" id="tamanoFuente">
+                            <option value="25">Extrachica</option>
+                            <option value="35">Chica</option>
+                            <option value="45">Mediana</option>
+                            <option value="55">Grande</option>
+                            <option value="65">Extragrande</option>
+                        </select>
+                        <br>
                         <button class="aceptar" id="aceptar"> Agregar marca. </button>
                     </div>
                 </div>
