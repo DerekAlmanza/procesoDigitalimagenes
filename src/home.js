@@ -70,6 +70,7 @@ const elegirImagen = () => {
                     if(dominoBlanco()) console.log('xd');
                     if(naipes()) console.log('xd');
                     if(marcaAgua()) console.log('xd');
+                    if(menuImgsRecursivas()) console.log('xd');
                     if(refrescarEscritorio()) console.log('xd');
                     if(guardarImagen()) console.log('xd');
                 })
